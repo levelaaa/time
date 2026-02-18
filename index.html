@@ -2,16 +2,26 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>수업교체원 발급</title>
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏫</text></svg>">
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            width: 100%;
+            height: 100%; 
+            overflow: hidden; /* 스크롤 방지 */
+        }
         iframe {
             width: 100vw;
-            height: 100vh;
+            /* 모바일 브라우저 주소창 높이를 고려한 동적 높이 설정 */
+            height: 100dvh; 
+            /* dvh 미지원 브라우저를 위한 폴백(fallback) 및 하단 여백 확보 */
+            min-height: 100%;
             border: none;
+            display: block;
         }
     </style>
 </head>
